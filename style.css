@@ -395,10 +395,10 @@ section {
     animation-fill-mode: forwards;
 }
 
-@keyframes .slide-in-from-left {
+@keyframes slide-in-from-left {
 
     from {
-        transform: translateX: (-40px);
+        transform: translateX(-40px);
     }
 
     to {
