@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personl Framework</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,9 +13,10 @@
     <header class="site-header">
         <div class="site-logo">
             <a href="index.html"><img src="img/logo.png" alt="Site Name Logo" width="40" height="40"></a>
-            <h1><a href="index.html">Personal Framework</a></h1>
+            <h1 class="hide-visually"><a href="index.html">Personal Framework</a></h1>
         </div>
-        <div class="site-nav">
+        <div class="site-nav" data-navstate="closed"> 
+            <button class="menu-button">Toggle Menu</button>
             <ul>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>

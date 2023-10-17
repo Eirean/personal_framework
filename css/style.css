@@ -21,7 +21,9 @@
     #FOOTER
 
 # CUSTOM STYLING
+    # CUSTOM HELPERS
     # CUSTOM TYPE BLOCK/SPECIMEN
+    # CUSTOM ANIMATIONS
 
 */
 
@@ -277,15 +279,49 @@ img {
     text-decoration: none;
 }
 
-.site-header .site-nav {}
+/* SITE NAV */
+
+
 
 .site-header .site-nav ul {
-    display: flex;
+    display: flex; 
+    flex-direction: column;
     list-style: none;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    background-color: rgb(12, 15, 182);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    min-height: 100vh;
+    width: 100%;
+    transition: all .4s ease-out;
 }
 
+.site-header .site-nav[data-navstate="closed"] ul {
+    transform: translateX(100vw);
+}
+
+.site-header .site-nav[data-navstate="open"] ul {
+    transform: translateX(0);
+
+}
+
+.site-header .site-nav .menu-button {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    z-index: 200;
+}
+
+.site-header .site-nav[data-navstate="open"] .menu-button {
+    position: fixed;
+  
+  
+}
 .site-header .site-nav a {
     display: block;
     padding: 1em;
@@ -293,10 +329,6 @@ img {
 }
 
 /* SITE MAIN */
-
-.site-main {
-    /* background-color: red; */
-}
 
 section {
     padding-top: 6em;
@@ -354,6 +386,13 @@ section {
 /*---------------------------------*/
 /* --------CUSTOM STYLING--------- */
 /* ------------------------------- */
+
+/* CUSTOM HELPERS */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
 
 /*  CUSTOM TYPE BLOCK: HEADLINE AND SUBHEADLINE */
 .headline {
